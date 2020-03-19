@@ -1,15 +1,11 @@
 #!/bin/bash
 
 if [ -z "${SCALA_VERSION}" ]; then
-    SCALA_VERSION=2.13;
-else 
-    echo "SCALA_VERSION is set to '$SCALA_VERSION'";
+    . config_file
 fi
 
 if [ -z "${KAFKA_VERSION}" ]; then
-    KAFKA_VERSION=2.4.1;
-else 
-    echo "KAFKA_VERSION is set to '$KAFKA_VERSION'";
+    . config_file
 fi
 
 FILENAME="kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz"
