@@ -2,7 +2,6 @@ FROM olned/gcc:9
 
 ARG BOOST_VERSION=1.3.0
 
-# Install librdkafka
 RUN apt-get update \
     && apt-get -y install wget  \
     && apt-get -y install zlib1g-dev  \
