@@ -1,5 +1,8 @@
 #!/bin/bash
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+cd ${DIR}
+
 . config_file
 
 if [ -n "$1" ]; then
@@ -9,5 +12,7 @@ fi
 BASE_IMAGE="${MAINAINER}/kafka"
 IMAGE_VERSION="${SCALA_VERSION}-${KAFKA_VERSION}"
 TARGET="$BASE_IMAGE:$IMAGE_VERSION"
+LATEST="$BASE_IMAGE:latest"
 
-docker login && docker push "$TARGET"
+docker tag "$TARGET" "$LATEST"
+docker login && docker push "$TARGET" && docker push "$LATEST"
