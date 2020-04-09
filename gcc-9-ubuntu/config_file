@@ -1,0 +1,3 @@
+MAINAINER=olned
+IMAGE_NAME=gcc-9-ubuntu
+UBUNTU_VERSION=18.04
