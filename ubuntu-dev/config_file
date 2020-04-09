@@ -1,0 +1,3 @@
+MAINAINER=olned
+IMAGE_NAME=ubuntu-dev
+UBUNTU_VERSION=18.04
