@@ -16,5 +16,5 @@ RUN set -e; cd tmp \
     && make \
     && make install \
     && cd /tmp \
-    && rm /tmp/v1.3.0.tar.gz
-#    && rm -rf /tmp/librdkafka-1.3.0
+    && rm /tmp/v1.3.0.tar.gz \
+    && rm -rf /tmp/librdkafka-1.3.0
