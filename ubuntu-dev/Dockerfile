@@ -21,7 +21,11 @@ RUN set ex; apt-get update \
         procps \
         lsb-release \
         ca-certificates \
-        locales
+        locales \
+    # Clean up
+    && apt-get autoremove -y \
+    && apt-get clean -y \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && locale-gen
 
