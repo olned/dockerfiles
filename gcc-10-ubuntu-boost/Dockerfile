@@ -4,7 +4,7 @@ FROM olned/gcc-10-ubuntu:"${UBUNTU_VERSION}-for-boost"
 
 ARG BOOST_VERSION=1.73.0
 ARG BOOST_SUBSTR=1_73_0
-ENV BOOST_SRCROOT=/usr/local/src/boost_${BOOST_SUBSTR}
+ENV BOOST_ROOT=/usr/local/src/boost_${BOOST_SUBSTR}
 
 ADD site-config.jam /etc/
 ADD "boost_${BOOST_SUBSTR}.tar.gz" /usr/local/src/
