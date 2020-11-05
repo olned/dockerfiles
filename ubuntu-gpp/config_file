@@ -1,0 +1,3 @@
+MAINAINER=olned
+IMAGE_NAME=ubuntu-gpp
+UBUNTU_VERSION=20.04
