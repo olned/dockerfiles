@@ -9,6 +9,10 @@ if [ -n "$1" ]; then
   MAINAINER=$1
 fi
 
+if [ -n "$2" ]; then
+  UBUNTU_VERSION=$2
+fi
+
 BASE_IMAGE="${MAINAINER}/${IMAGE_NAME}"
 TARGET="$BASE_IMAGE:$UBUNTU_VERSION"
 LATEST="$BASE_IMAGE:latest"

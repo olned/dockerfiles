@@ -9,6 +9,14 @@ if [ -n "$1" ]; then
   MAINAINER=$1
 fi
 
+if [ -n "$2" ]; then
+  UBUNTU_VERSION=$2
+fi
+
+echo MAINAINER=${MAINAINER} > config_file
+echo IMAGE_NAME=${IMAGE_NAME} >> config_file
+echo UBUNTU_VERSION=${UBUNTU_VERSION} >> config_file
+
 BASE_IMAGE="${MAINAINER}/${IMAGE_NAME}"
 TARGET="$BASE_IMAGE:$UBUNTU_VERSION"
 

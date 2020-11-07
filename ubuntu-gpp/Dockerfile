@@ -27,6 +27,7 @@ RUN set ex; apt-get update \
         make \
         nano \
         procps \
+        sudo \
         unzip \
         valgrind \
         wget \
