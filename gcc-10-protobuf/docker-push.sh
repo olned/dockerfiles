@@ -9,8 +9,9 @@ if [ -n "$1" ]; then
   MAINAINER=$1
 fi
 
+IMAGE_NAME=gcc-10-ubuntu
 BASE_IMAGE="${MAINAINER}/${IMAGE_NAME}"
-TARGET="$BASE_IMAGE:$UBUNTU_VERSION-for-boost"
+TARGET="${BASE_IMAGE}:${UBUNTU_VERSION}-boost-${BOOST_VERSION}-protobuf-${PROTOBUF_VERSION}"
 LATEST="$BASE_IMAGE:latest"
 
 docker tag "$TARGET" "$LATEST"

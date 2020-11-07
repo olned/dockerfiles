@@ -10,8 +10,8 @@ if [ -n "$1" ]; then
 fi
 
 BASE_IMAGE="${MAINAINER}/${IMAGE_NAME}"
-TARGET="$BASE_IMAGE:$UBUNTU_VERSION-for-boost"
-LATEST="$BASE_IMAGE:latest"
+TARGET="${BASE_IMAGE}:${UBUNTU_VERSION}-${PROTOBUF_VERSION}"
 
-docker tag "$TARGET" "$LATEST"
-docker login && docker push "$TARGET" && docker push "$LATEST"
+docker build -t "${TARGET}" \
+  --build-arg UBUNTU_VERSION="${UBUNTU_VERSION}" \
+  .
