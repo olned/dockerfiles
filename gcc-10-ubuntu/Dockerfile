@@ -1,6 +1,6 @@
 ARG UBUNTU_VERSION=20.04
 
-FROM olned/ubuntu-dev:${UBUNTU_VERSION}
+FROM olned/ubuntu-gpp:${UBUNTU_VERSION}
 
 ENV DEBIAN_FRONTEND=noninteractive
 
